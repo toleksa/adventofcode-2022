@@ -1,6 +1,7 @@
 import sys
+import os
 
-if sys.argc != 1:
+if len(sys.argv) != 2:
     print(f'usage: {sys.argv[0]} <file>')
     exit(1)
 
@@ -14,7 +15,7 @@ SUM=0
 MAX=0
 with open(FILE) as file:
     for LINE in file:
-        LINE=line.rstrip()
+        LINE=LINE.rstrip()
         if LINE != "":
             SUM=SUM+int(LINE)
         else:
